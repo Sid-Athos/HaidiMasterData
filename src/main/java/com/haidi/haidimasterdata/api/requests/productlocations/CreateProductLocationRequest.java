@@ -20,6 +20,8 @@ public class CreateProductLocationRequest {
 
     public Double maxCoverage;
 
+    
+    
     public Double minCoverage;
 
     public Integer roundingValue;
