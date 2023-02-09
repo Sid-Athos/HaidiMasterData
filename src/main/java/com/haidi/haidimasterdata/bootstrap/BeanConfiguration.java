@@ -3,15 +3,13 @@ package com.haidi.haidimasterdata.bootstrap;
 import com.haidi.haidimasterdata.domain.ports.in.*;
 import com.haidi.haidimasterdata.domain.ports.out.*;
 import com.haidi.haidimasterdata.domain.services.*;
-import io.swagger.v3.oas.models.Components;
-import io.swagger.v3.oas.models.OpenAPI;
-import io.swagger.v3.oas.models.security.SecurityRequirement;
-import io.swagger.v3.oas.models.security.SecurityScheme;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
 @Configuration
-public class BeanConfiguration {
+public class BeanConfiguration extends WebSecurityConfigurerAdapter {
 
     /** Spring beans configuration */
 
@@ -40,22 +38,9 @@ public class BeanConfiguration {
         return new LocationTypesOperationService(locationTypePersistencePort);
     }
 
-    /** Swagger conf */
-
-    private static final String SCHEME_NAME = "basicAuth";
-    private static final String SCHEME = "basic";
-
-    @Bean
-    public OpenAPI customOpenAPI( ) {
-        return new OpenAPI()
-                .components(new Components()
-                        .addSecuritySchemes(SCHEME_NAME, createSecurityScheme()))
-                .addSecurityItem(new SecurityRequirement().addList(SCHEME_NAME));
-    }
-    private SecurityScheme createSecurityScheme() {
-        return new SecurityScheme()
-                .name(SCHEME_NAME)
-                .type(SecurityScheme.Type.HTTP)
-                .scheme(SCHEME);
+    @Override
+    //we have stopped the csrf to make post method work
+    protected void configure(HttpSecurity http) throws Exception{
+        http.cors().and().csrf().disable();
     }
 }
