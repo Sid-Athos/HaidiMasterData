@@ -26,6 +26,7 @@ public class ProductsController {
     @ApiResponse(responseCode = "200", description = "Created product database Identifier")
     @PostMapping(value = "/createProduct", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
     public Long createProduct(@RequestBody CreateProductRequest productRequest){
+
         final var product = Product.createOne(
                 productRequest.code,
                 productRequest.description,
