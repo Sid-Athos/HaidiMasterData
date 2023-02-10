@@ -94,23 +94,7 @@
 
 
     <build>
-        <finalName>ROOT</finalName>
-
-        <plugins>
-            <plugin>
-                <groupId>com.microsoft.azure</groupId>
-                <artifactId>azure-webapp-maven-plugin</artifactId>
-                <version>2.9.0</version>
-                <configuration>
-                    <appName>master-data</appName>
-                    <resourceGroup>HaidiSaas-dev-app</resourceGroup>
-                    <pricingTier>B1</pricingTier>
-                    <region>westeurope</region>
-                    <deployment>
-                        <resources/>
-                    </deployment>
-                </configuration>
-            </plugin>
+       <plugins>
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
