@@ -734,27 +734,27 @@ java_class_path (initial): C:\Program Files\JetBrains\IntelliJ IDEA 2022.3.1\plu
 Launcher Type: SUN_STANDARD
 
 [Global flags]
-     intx CICompilerCount                          = 12                                        {product} {ergonomic}
-     uint ConcGCThreads                            = 3                                         {product} {ergonomic}
-     uint G1ConcRefinementThreads                  = 13                                        {product} {ergonomic}
-   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
-    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
-   size_t InitialHeapSize                          = 134217728                                 {product} {ergonomic}
-   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
-   size_t MaxHeapSize                              = 2130706432                                {product} {ergonomic}
-   size_t MaxNewSize                               = 1278214144                                {product} {ergonomic}
-   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
-   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
-    uintx NonNMethodCodeHeapSize                   = 7602480                                {pd product} {ergonomic}
-    uintx NonProfiledCodeHeapSize                  = 122027880                              {pd product} {ergonomic}
-    uintx ProfiledCodeHeapSize                     = 122027880                              {pd product} {ergonomic}
-    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
-     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     intx CICompilerCount                          = 12                                        {consultant} {ergonomic}
+     uint ConcGCThreads                            = 3                                         {consultant} {ergonomic}
+     uint G1ConcRefinementThreads                  = 13                                        {consultant} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {consultant} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {consultant} {ergonomic}
+   size_t InitialHeapSize                          = 134217728                                 {consultant} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {consultant} {ergonomic}
+   size_t MaxHeapSize                              = 2130706432                                {consultant} {ergonomic}
+   size_t MaxNewSize                               = 1278214144                                {consultant} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {consultant} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {consultant} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 7602480                                {pd consultant} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122027880                              {pd consultant} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122027880                              {pd consultant} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd consultant} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {consultant} {ergonomic}
    size_t SoftMaxHeapSize                          = 2130706432                             {manageable} {ergonomic}
-     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
-     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
-     bool UseG1GC                                  = true                                      {product} {ergonomic}
-     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {consultant lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {consultant lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {consultant} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd consultant} {ergonomic}
 
 Logging:
 Log output configuration:
@@ -778,7 +778,7 @@ OS:
  Windows 10 , 64 bit Build 19041 (10.0.19041.2364)
 OS uptime: 4 days 13:33 hours
 
-CPU: total 16 (initial active 16) (16 cores per cpu, 2 threads per core) family 23 model 113 stepping 0 microcode 0x0, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4a, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, clmul, bmi1, bmi2, adx, sha, fma, vzeroupper, clflush, clflushopt, rdtscp, rdpid
+CPU: total 16 (initial active 16) (16 cores per cpu, 2 threads per core) availability 23 model 113 stepping 0 microcode 0x0, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4a, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, clmul, bmi1, bmi2, adx, sha, fma, vzeroupper, clflush, clflushopt, rdtscp, rdpid
 
 Memory: 4k page, system-wide physical 8123M (470M free)
 TotalPageFile size 32699M (AvailPageFile size 6M)
